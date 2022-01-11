@@ -1,0 +1,232 @@
+
+Starting sweeps
+
+Launching task 0
+Launching task 1
+wandb: Starting wandb agent 🕵️
+2022-01-10 23:26:22,634 - wandb.wandb_agent - INFO - Running runs: []
+2022-01-10 23:26:22,900 - wandb.wandb_agent - INFO - Agent received command: run
+2022-01-10 23:26:22,900 - wandb.wandb_agent - INFO - Agent starting run with config:
+	factor: 0.8540360692062366
+	hidden: 130
+	hidden_activation: ReLU
+	layer_norm: False
+	lr: 0.003941368330520552
+	nb_edge_layers: 1
+	nb_graph_iters: 6
+	nb_node_layers: 3
+	patience: 17
+2022-01-10 23:26:22,904 - wandb.wandb_agent - INFO - About to run command: /usr/bin/env python train.py --factor=0.8540360692062366 --hidden=130 --hidden_activation=ReLU --layer_norm=False --lr=0.003941368330520552 --nb_edge_layers=1 --nb_graph_iters=6 --nb_node_layers=3 --patience=17
+Running main
+Mon Jan 10 23:26:27 2022
+2022-01-10 23:26:27,920 - wandb.wandb_agent - INFO - Running runs: ['2w3pcve9']
+wandb: Currently logged in as: murnanedaniel (use `wandb login --relogin` to force relogin)
+wandb: WARNING Ignored wandb.init() arg project when running a sweep
+2022-01-10 23:26:30.534422: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+wandb: Tracking run with wandb version 0.12.9
+wandb: Syncing run worldly-sweep-1
+wandb: ⭐️ View project at https://wandb.ai/murnanedaniel/HPO_Demo
+wandb: 🧹 View sweep at https://wandb.ai/murnanedaniel/HPO_Demo/sweeps/4h53uskw
+wandb: 🚀 View run at https://wandb.ai/murnanedaniel/HPO_Demo/runs/2w3pcve9
+wandb: Run data is saved locally in /global/u2/d/danieltm/ATLAS-Meeting-HPO-Demo/scripts/wandb/run-20220110_232628-2w3pcve9
+wandb: Run `wandb offline` to turn off syncing.
+
+Initialising model
+Mon Jan 10 23:26:34 2022
+Traceback (most recent call last):
+  File "train.py", line 41, in <module>
+    main()
+  File "train.py", line 32, in main
+    model = InteractionGNN(dict(config))
+  File "../lightning_modules/Models/interaction_gnn.py", line 26, in __init__
+    concatenation_factor = 3 if (self.hparams["aggregation"] in ["sum_max", "mean_max"]) else 2
+KeyError: 'aggregation'
+
+wandb: Waiting for W&B process to finish, PID 69386... (failed 1). Press ctrl-c to abort syncing.
+wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.02MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.02MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.02MB uploaded (0.00MB deduped)wandb: | 0.02MB of 0.02MB uploaded (0.00MB deduped)wandb: / 0.02MB of 0.02MB uploaded (0.00MB deduped)wandb: - 0.02MB of 0.02MB uploaded (0.00MB deduped)wandb: \ 0.02MB of 0.02MB uploaded (0.00MB deduped)wandb: | 0.02MB of 0.02MB uploaded (0.00MB deduped)wandb: / 0.02MB of 0.02MB uploaded (0.00MB deduped)wandb: - 0.02MB of 0.02MB uploaded (0.00MB deduped)wandb:                                                                                
+wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Synced worldly-sweep-1: https://wandb.ai/murnanedaniel/HPO_Demo/runs/2w3pcve9
+wandb: Find logs at: ./wandb/run-20220110_232628-2w3pcve9/logs/debug.log
+wandb: 
+[0m2022-01-10 23:26:53,680 - wandb.wandb_agent - INFO - Cleaning up finished run: 2w3pcve9
+2022-01-10 23:26:53,997 - wandb.wandb_agent - INFO - Agent received command: run
+2022-01-10 23:26:53,997 - wandb.wandb_agent - INFO - Agent starting run with config:
+	factor: 0.7441589067037897
+	hidden: 75
+	hidden_activation: ReLU
+	layer_norm: False
+	lr: 0.001434232680463094
+	nb_edge_layers: 4
+	nb_graph_iters: 10
+	nb_node_layers: 2
+	patience: 3
+2022-01-10 23:26:54,001 - wandb.wandb_agent - INFO - About to run command: /usr/bin/env python train.py --factor=0.7441589067037897 --hidden=75 --hidden_activation=ReLU --layer_norm=False --lr=0.001434232680463094 --nb_edge_layers=4 --nb_graph_iters=10 --nb_node_layers=2 --patience=3
+Running main
+Mon Jan 10 23:26:59 2022
+2022-01-10 23:26:59,020 - wandb.wandb_agent - INFO - Running runs: ['pirlj1nj']
+wandb: Currently logged in as: murnanedaniel (use `wandb login --relogin` to force relogin)
+wandb: WARNING Ignored wandb.init() arg project when running a sweep
+2022-01-10 23:27:01.210079: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+wandb: Tracking run with wandb version 0.12.9
+wandb: Syncing run fine-sweep-2
+wandb: ⭐️ View project at https://wandb.ai/murnanedaniel/HPO_Demo
+wandb: 🧹 View sweep at https://wandb.ai/murnanedaniel/HPO_Demo/sweeps/4h53uskw
+wandb: 🚀 View run at https://wandb.ai/murnanedaniel/HPO_Demo/runs/pirlj1nj
+wandb: Run data is saved locally in /global/u2/d/danieltm/ATLAS-Meeting-HPO-Demo/scripts/wandb/run-20220110_232659-pirlj1nj
+wandb: Run `wandb offline` to turn off syncing.
+
+Initialising model
+Mon Jan 10 23:27:06 2022
+Traceback (most recent call last):
+  File "train.py", line 41, in <module>
+    main()
+  File "train.py", line 32, in main
+    model = InteractionGNN(dict(config))
+  File "../lightning_modules/Models/interaction_gnn.py", line 26, in __init__
+    concatenation_factor = 3 if (self.hparams["aggregation"] in ["sum_max", "mean_max"]) else 2
+KeyError: 'aggregation'
+
+wandb: Waiting for W&B process to finish, PID 70136... (failed 1). Press ctrl-c to abort syncing.
+wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.02MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.02MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.02MB uploaded (0.00MB deduped)wandb: \ 0.02MB of 0.02MB uploaded (0.00MB deduped)wandb: | 0.02MB of 0.02MB uploaded (0.00MB deduped)wandb: / 0.02MB of 0.02MB uploaded (0.00MB deduped)wandb: - 0.02MB of 0.02MB uploaded (0.00MB deduped)wandb: \ 0.02MB of 0.02MB uploaded (0.00MB deduped)wandb: | 0.02MB of 0.02MB uploaded (0.00MB deduped)wandb: / 0.02MB of 0.02MB uploaded (0.00MB deduped)wandb: - 0.02MB of 0.02MB uploaded (0.00MB deduped)wandb:                                                                                
+wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Synced fine-sweep-2: https://wandb.ai/murnanedaniel/HPO_Demo/runs/pirlj1nj
+wandb: Find logs at: ./wandb/run-20220110_232659-pirlj1nj/logs/debug.log
+wandb: 
+[0m2022-01-10 23:27:19,638 - wandb.wandb_agent - INFO - Cleaning up finished run: pirlj1nj
+2022-01-10 23:27:19,964 - wandb.wandb_agent - INFO - Agent received command: run
+2022-01-10 23:27:19,964 - wandb.wandb_agent - INFO - Agent starting run with config:
+	factor: 0.16550903154383123
+	hidden: 110
+	hidden_activation: Tanh
+	layer_norm: False
+	lr: 0.0011539318199951705
+	nb_edge_layers: 4
+	nb_graph_iters: 2
+	nb_node_layers: 3
+	patience: 3
+2022-01-10 23:27:19,967 - wandb.wandb_agent - INFO - About to run command: /usr/bin/env python train.py --factor=0.16550903154383123 --hidden=110 --hidden_activation=Tanh --layer_norm=False --lr=0.0011539318199951705 --nb_edge_layers=4 --nb_graph_iters=2 --nb_node_layers=3 --patience=3
+Running main
+Mon Jan 10 23:27:23 2022
+wandb: Currently logged in as: murnanedaniel (use `wandb login --relogin` to force relogin)
+wandb: WARNING Ignored wandb.init() arg project when running a sweep
+2022-01-10 23:27:24,980 - wandb.wandb_agent - INFO - Running runs: ['xqvpf9xh']
+2022-01-10 23:27:25.135367: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+wandb: Tracking run with wandb version 0.12.9
+wandb: Syncing run wandering-sweep-3
+wandb: ⭐️ View project at https://wandb.ai/murnanedaniel/HPO_Demo
+wandb: 🧹 View sweep at https://wandb.ai/murnanedaniel/HPO_Demo/sweeps/4h53uskw
+wandb: 🚀 View run at https://wandb.ai/murnanedaniel/HPO_Demo/runs/xqvpf9xh
+wandb: Run data is saved locally in /global/u2/d/danieltm/ATLAS-Meeting-HPO-Demo/scripts/wandb/run-20220110_232723-xqvpf9xh
+wandb: Run `wandb offline` to turn off syncing.
+
+Initialising model
+Mon Jan 10 23:27:30 2022
+Traceback (most recent call last):
+  File "train.py", line 41, in <module>
+    main()
+  File "train.py", line 32, in main
+    model = InteractionGNN(dict(config))
+  File "../lightning_modules/Models/interaction_gnn.py", line 26, in __init__
+    concatenation_factor = 3 if (self.hparams["aggregation"] in ["sum_max", "mean_max"]) else 2
+KeyError: 'aggregation'
+
+wandb: Waiting for W&B process to finish, PID 70533... (failed 1). Press ctrl-c to abort syncing.
+wandb: - 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: | 0.00MB of 0.00MB uploaded (0.00MB deduped)wandb: / 0.00MB of 0.02MB uploaded (0.00MB deduped)wandb: - 0.00MB of 0.02MB uploaded (0.00MB deduped)wandb: \ 0.00MB of 0.02MB uploaded (0.00MB deduped)wandb: | 0.01MB of 0.02MB uploaded (0.00MB deduped)wandb: / 0.01MB of 0.02MB uploaded (0.00MB deduped)wandb: - 0.01MB of 0.02MB uploaded (0.00MB deduped)wandb: \ 0.02MB of 0.02MB uploaded (0.00MB deduped)wandb: | 0.02MB of 0.02MB uploaded (0.00MB deduped)wandb: / 0.02MB of 0.02MB uploaded (0.00MB deduped)wandb: - 0.02MB of 0.02MB uploaded (0.00MB deduped)wandb: \ 0.02MB of 0.02MB uploaded (0.00MB deduped)wandb: | 0.02MB of 0.02MB uploaded (0.00MB deduped)wandb: / 0.02MB of 0.02MB uploaded (0.00MB deduped)wandb:                                                                                
+wandb: Synced 6 W&B file(s), 0 media file(s), 0 artifact file(s) and 0 other file(s)
+wandb: Synced wandering-sweep-3: https://wandb.ai/murnanedaniel/HPO_Demo/runs/xqvpf9xh
+wandb: Find logs at: ./wandb/run-20220110_232723-xqvpf9xh/logs/debug.log
+wandb: 
+[0m2022-01-10 23:27:40,394 - wandb.wandb_agent - INFO - Cleaning up finished run: xqvpf9xh
+2022-01-10 23:27:40,765 - wandb.wandb_agent - INFO - Agent received command: run
+2022-01-10 23:27:40,766 - wandb.wandb_agent - INFO - Agent starting run with config:
+	factor: 0.14113003569066393
+	hidden: 254
+	hidden_activation: ReLU
+	layer_norm: True
+	lr: 0.002864483000852458
+	nb_edge_layers: 1
+	nb_graph_iters: 10
+	nb_node_layers: 4
+	patience: 17
+2022-01-10 23:27:40,769 - wandb.wandb_agent - INFO - About to run command: /usr/bin/env python train.py --factor=0.14113003569066393 --hidden=254 --hidden_activation=ReLU --layer_norm=True --lr=0.002864483000852458 --nb_edge_layers=1 --nb_graph_iters=10 --nb_node_layers=4 --patience=17
+Running main
+Mon Jan 10 23:27:44 2022
+wandb: Currently logged in as: murnanedaniel (use `wandb login --relogin` to force relogin)
+wandb: WARNING Ignored wandb.init() arg project when running a sweep
+2022-01-10 23:27:45,783 - wandb.wandb_agent - INFO - Running runs: ['6eq0h892']
+2022-01-10 23:27:46.013241: I tensorflow/stream_executor/platform/default/dso_loader.cc:49] Successfully opened dynamic library libcudart.so.11.0
+wandb: Tracking run with wandb version 0.12.9
+wandb: Syncing run zany-sweep-4
+wandb: ⭐️ View project at https://wandb.ai/murnanedaniel/HPO_Demo
+wandb: 🧹 View sweep at https://wandb.ai/murnanedaniel/HPO_Demo/sweeps/4h53uskw
+wandb: 🚀 View run at https://wandb.ai/murnanedaniel/HPO_Demo/runs/6eq0h892
+wandb: Run data is saved locally in /global/u2/d/danieltm/ATLAS-Meeting-HPO-Demo/scripts/wandb/run-20220110_232744-6eq0h892
+wandb: Run `wandb offline` to turn off syncing.
+
+Initialising model
+Mon Jan 10 23:27:50 2022
+/global/homes/d/danieltm/.conda/envs/exatrkx-test/lib/python3.7/site-packages/pytorch_lightning/loggers/wandb.py:342: UserWarning: There is a wandb run already in progress and newly created instances of `WandbLogger` will reuse this run. If this is not desired, call `wandb.finish()` before instantiating `WandbLogger`.
+  "There is a wandb run already in progress and newly created instances of `WandbLogger` will reuse"
+[34m[1mwandb[0m: logging graph, to disable use `wandb.watch(log_graph=False)`
+GPU available: True, used: True
+TPU available: False, using: 0 TPU cores
+IPU available: False, using: 0 IPUs
+Setting up dataset
+Loading events
+Events loaded!
+Events processed!
+Loading events
+Events loaded!
+Events processed!
+Loading events
+Events loaded!
+Events processed!
+LOCAL_RANK: 0 - CUDA_VISIBLE_DEVICES: [0]
+[34m[1mwandb[0m: [33mWARNING[0m Config item 'factor' was locked by 'sweep' (ignored update).
+[34m[1mwandb[0m: [33mWARNING[0m Config item 'hidden' was locked by 'sweep' (ignored update).
+[34m[1mwandb[0m: [33mWARNING[0m Config item 'hidden_activation' was locked by 'sweep' (ignored update).
+[34m[1mwandb[0m: [33mWARNING[0m Config item 'layer_norm' was locked by 'sweep' (ignored update).
+[34m[1mwandb[0m: [33mWARNING[0m Config item 'lr' was locked by 'sweep' (ignored update).
+[34m[1mwandb[0m: [33mWARNING[0m Config item 'nb_edge_layers' was locked by 'sweep' (ignored update).
+[34m[1mwandb[0m: [33mWARNING[0m Config item 'nb_graph_iters' was locked by 'sweep' (ignored update).
+[34m[1mwandb[0m: [33mWARNING[0m Config item 'nb_node_layers' was locked by 'sweep' (ignored update).
+[34m[1mwandb[0m: [33mWARNING[0m Config item 'patience' was locked by 'sweep' (ignored update).
+Set SLURM handle signals.
+
+  | Name                   | Type       | Params
+------------------------------------------------------
+0 | node_encoder           | Sequential | 131 K 
+1 | edge_encoder           | Sequential | 259 K 
+2 | edge_network           | Sequential | 324 K 
+3 | node_network           | Sequential | 259 K 
+4 | output_edge_classifier | Sequential | 325 K 
+------------------------------------------------------
+1.3 M     Trainable params
+0         Non-trainable params
+1.3 M     Total params
+5.203     Total estimated model params size (MB)
+Validation sanity check: 0it [00:00, ?it/s]Validation sanity check:   0% 0/2 [00:00<?, ?it/s]Validation sanity check:  50% 1/2 [00:00<00:00,  2.39it/s]                                                          Training: 0it [00:00, ?it/s]/global/homes/d/danieltm/.conda/envs/exatrkx-test/lib/python3.7/site-packages/pytorch_lightning/trainer/data_loading.py:112: UserWarning: The dataloader, val_dataloader 0, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 80 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  f"The dataloader, {name}, does not have many workers which may be a bottleneck."
+/global/homes/d/danieltm/.conda/envs/exatrkx-test/lib/python3.7/site-packages/torch/utils/checkpoint.py:25: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn("None of the inputs have requires_grad=True. Gradients will be None")
+/global/homes/d/danieltm/.conda/envs/exatrkx-test/lib/python3.7/site-packages/pytorch_lightning/utilities/data.py:60: UserWarning: Trying to infer the `batch_size` from an ambiguous collection. The batch size we found is 5. To avoid any miscalculations, use `self.log(..., batch_size=batch_size)`.
+  "Trying to infer the `batch_size` from an ambiguous collection. The batch size we"
+/global/homes/d/danieltm/.conda/envs/exatrkx-test/lib/python3.7/site-packages/torch/utils/checkpoint.py:25: UserWarning: None of the inputs have requires_grad=True. Gradients will be None
+  warnings.warn("None of the inputs have requires_grad=True. Gradients will be None")
+/global/homes/d/danieltm/.conda/envs/exatrkx-test/lib/python3.7/site-packages/pytorch_lightning/trainer/data_loading.py:112: UserWarning: The dataloader, train_dataloader, does not have many workers which may be a bottleneck. Consider increasing the value of the `num_workers` argument` (try 80 which is the number of cpus on this machine) in the `DataLoader` init to improve performance.
+  f"The dataloader, {name}, does not have many workers which may be a bottleneck."
+Training:   0% 0/125 [00:00<?, ?it/s]Epoch 0:   0% 0/125 [00:00<?, ?it/s] Epoch 0:   1% 1/125 [00:00<00:15,  8.11it/s]Epoch 0:   1% 1/125 [00:00<00:15,  8.09it/s, loss=0.939, v_num=h892]Epoch 0:   2% 2/125 [00:00<00:12,  9.78it/s, loss=0.948, v_num=h892]Epoch 0:   2% 3/125 [00:00<00:13,  9.15it/s, loss=0.948, v_num=h892]Epoch 0:   2% 3/125 [00:00<00:13,  9.14it/s, loss=0.937, v_num=h892]Epoch 0:   3% 4/125 [00:00<00:12, 10.06it/s, loss=0.941, v_num=h892]Epoch 0:   4% 5/125 [00:00<00:11, 10.08it/s, loss=0.941, v_num=h892]Epoch 0:   4% 5/125 [00:00<00:11, 10.07it/s, loss=0.938, v_num=h892]Epoch 0:   5% 6/125 [00:00<00:11, 10.11it/s, loss=0.935, v_num=h892]Epoch 0:   6% 7/125 [00:00<00:12,  9.83it/s, loss=0.935, v_num=h892]Epoch 0:   6% 7/125 [00:00<00:12,  9.83it/s, loss=0.927, v_num=h892]Epoch 0:   6% 8/125 [00:00<00:11, 10.03it/s, loss=0.93, v_num=h892] Epoch 0:   7% 9/125 [00:00<00:11, 10.07it/s, loss=0.93, v_num=h892]Epoch 0:   7% 9/125 [00:00<00:11, 10.07it/s, loss=0.924, v_num=h892]Epoch 0:   8% 10/125 [00:01<00:12,  9.58it/s, loss=0.922, v_num=h892]Epoch 0:   9% 11/125 [00:01<00:11,  9.59it/s, loss=0.922, v_num=h892]Epoch 0:   9% 11/125 [00:01<00:11,  9.58it/s, loss=0.919, v_num=h892]Epoch 0:  10% 12/125 [00:01<00:12,  9.29it/s, loss=0.917, v_num=h892]Epoch 0:  10% 13/125 [00:01<00:11,  9.38it/s, loss=0.917, v_num=h892]Epoch 0:  10% 13/125 [00:01<00:11,  9.37it/s, loss=0.915, v_num=h892]Epoch 0:  11% 14/125 [00:01<00:11,  9.32it/s, loss=0.912, v_num=h892]Epoch 0:  12% 15/125 [00:01<00:11,  9.35it/s, loss=0.912, v_num=h892]Epoch 0:  12% 15/125 [00:01<00:11,  9.35it/s, loss=0.908, v_num=h892]Epoch 0:  13% 16/125 [00:01<00:12,  8.92it/s, loss=0.904, v_num=h892]Epoch 0:  14% 17/125 [00:01<00:11,  9.02it/s, loss=0.904, v_num=h892]Epoch 0:  14% 17/125 [00:01<00:11,  9.02it/s, loss=0.902, v_num=h892]Epoch 0:  14% 18/125 [00:02<00:12,  8.70it/s, loss=0.896, v_num=h892]Epoch 0:  15% 19/125 [00:02<00:12,  8.80it/s, loss=0.896, v_num=h892]Epoch 0:  15% 19/125 [00:02<00:12,  8.79it/s, loss=0.895, v_num=h892]Epoch 0:  16% 20/125 [00:02<00:11,  8.83it/s, loss=0.894, v_num=h892]Epoch 0:  17% 21/125 [00:02<00:11,  8.90it/s, loss=0.894, v_num=h892]Epoch 0:  17% 21/125 [00:02<00:11,  8.90it/s, loss=0.89, v_num=h892] Epoch 0:  18% 22/125 [00:02<00:11,  8.89it/s, loss=0.886, v_num=h892]Epoch 0:  18% 23/125 [00:02<00:11,  8.76it/s, loss=0.886, v_num=h892]Epoch 0:  18% 23/125 [00:02<00:11,  8.76it/s, loss=0.884, v_num=h892]Epoch 0:  19% 24/125 [00:02<00:11,  8.82it/s, loss=0.88, v_num=h892] Epoch 0:  20% 25/125 [00:02<00:11,  8.91it/s, loss=0.88, v_num=h892]Epoch 0:  20% 25/125 [00:02<00:11,  8.91it/s, loss=0.877, v_num=h892]Epoch 0:  21% 26/125 [00:02<00:11,  8.99it/s, loss=0.875, v_num=h892]Epoch 0:  22% 27/125 [00:02<00:10,  9.06it/s, loss=0.875, v_num=h892]Epoch 0:  22% 27/125 [00:02<00:10,  9.06it/s, loss=0.875, v_num=h892]Epoch 0:  22% 28/125 [00:03<00:10,  9.07it/s, loss=0.871, v_num=h892]Epoch 0:  23% 29/125 [00:03<00:10,  9.13it/s, loss=0.871, v_num=h892]Epoch 0:  23% 29/125 [00:03<00:10,  9.13it/s, loss=0.871, v_num=h892]Epoch 0:  24% 30/125 [00:03<00:10,  9.18it/s, loss=0.87, v_num=h892] Epoch 0:  25% 31/125 [00:03<00:10,  9.24it/s, loss=0.87, v_num=h892]Epoch 0:  25% 31/125 [00:03<00:10,  9.24it/s, loss=0.869, v_num=h892]Epoch 0:  26% 32/125 [00:03<00:10,  9.25it/s, loss=0.868, v_num=h892]Epoch 0:  26% 33/125 [00:03<00:09,  9.25it/s, loss=0.868, v_num=h892]Epoch 0:  26% 33/125 [00:03<00:09,  9.25it/s, loss=0.867, v_num=h892]Epoch 0:  27% 34/125 [00:03<00:09,  9.27it/s, loss=0.866, v_num=h892]Epoch 0:  28% 35/125 [00:03<00:09,  9.30it/s, loss=0.866, v_num=h892]Epoch 0:  28% 35/125 [00:03<00:09,  9.30it/s, loss=0.865, v_num=h892]Epoch 0:  29% 36/125 [00:03<00:09,  9.36it/s, loss=0.866, v_num=h892]Epoch 0:  30% 37/125 [00:03<00:09,  9.46it/s, loss=0.866, v_num=h892]Epoch 0:  30% 37/125 [00:03<00:09,  9.46it/s, loss=0.865, v_num=h892]Epoch 0:  30% 38/125 [00:04<00:09,  9.47it/s, loss=0.867, v_num=h892]Epoch 0:  31% 39/125 [00:04<00:09,  9.50it/s, loss=0.867, v_num=h892]Epoch 0:  31% 39/125 [00:04<00:09,  9.50it/s, loss=0.867, v_num=h892]Epoch 0:  32% 40/125 [00:04<00:08,  9.58it/s, loss=0.868, v_num=h892]Epoch 0:  33% 41/125 [00:04<00:08,  9.62it/s, loss=0.868, v_num=h892]Epoch 0:  33% 41/125 [00:04<00:08,  9.62it/s, loss=0.867, v_num=h892]Epoch 0:  34% 42/125 [00:04<00:08,  9.65it/s, loss=0.865, v_num=h892]Epoch 0:  34% 43/125 [00:04<00:08,  9.65it/s, loss=0.865, v_num=h892]Epoch 0:  34% 43/125 [00:04<00:08,  9.65it/s, loss=0.863, v_num=h892]Epoch 0:  35% 44/125 [00:04<00:08,  9.67it/s, loss=0.864, v_num=h892]Epoch 0:  36% 45/125 [00:04<00:08,  9.69it/s, loss=0.864, v_num=h892]Epoch 0:  36% 45/125 [00:04<00:08,  9.68it/s, loss=0.863, v_num=h892]Epoch 0:  37% 46/125 [00:04<00:08,  9.70it/s, loss=0.861, v_num=h892]Epoch 0:  38% 47/125 [00:04<00:08,  9.74it/s, loss=0.861, v_num=h892]Epoch 0:  38% 47/125 [00:04<00:08,  9.74it/s, loss=0.86, v_num=h892] Epoch 0:  38% 48/125 [00:04<00:07,  9.73it/s, loss=0.858, v_num=h892]Epoch 0:  39% 49/125 [00:05<00:07,  9.73it/s, loss=0.858, v_num=h892]Epoch 0:  39% 49/125 [00:05<00:07,  9.73it/s, loss=0.853, v_num=h892]Epoch 0:  40% 50/125 [00:05<00:07,  9.75it/s, loss=0.852, v_num=h892]Epoch 0:  41% 51/125 [00:05<00:07,  9.77it/s, loss=0.852, v_num=h892]Epoch 0:  41% 51/125 [00:05<00:07,  9.77it/s, loss=0.849, v_num=h892]Epoch 0:  42% 52/125 [00:05<00:07,  9.81it/s, loss=0.847, v_num=h892]Epoch 0:  42% 53/125 [00:05<00:07,  9.81it/s, loss=0.847, v_num=h892]Epoch 0:  42% 53/125 [00:05<00:07,  9.81it/s, loss=0.847, v_num=h892]Epoch 0:  43% 54/125 [00:05<00:07,  9.39it/s, loss=0.849, v_num=h892]Epoch 0:  44% 55/125 [00:05<00:07,  9.26it/s, loss=0.849, v_num=h892]Epoch 0:  44% 55/125 [00:05<00:07,  9.26it/s, loss=0.85, v_num=h892] Epoch 0:  45% 56/125 [00:06<00:07,  9.25it/s, loss=0.85, v_num=h892]Epoch 0:  46% 57/125 [00:06<00:07,  9.30it/s, loss=0.85, v_num=h892]Epoch 0:  46% 57/125 [00:06<00:07,  9.30it/s, loss=0.851, v_num=h892]Epoch 0:  46% 58/125 [00:06<00:07,  9.34it/s, loss=0.851, v_num=h892]Epoch 0:  47% 59/125 [00:06<00:07,  9.34it/s, loss=0.851, v_num=h892]Epoch 0:  47% 59/125 [00:06<00:07,  9.34it/s, loss=0.85, v_num=h892] Epoch 0:  48% 60/125 [00:06<00:06,  9.35it/s, loss=0.849, v_num=h892]Epoch 0:  49% 61/125 [00:06<00:06,  9.37it/s, loss=0.849, v_num=h892]Epoch 0:  49% 61/125 [00:06<00:06,  9.37it/s, loss=0.85, v_num=h892] Epoch 0:  50% 62/125 [00:06<00:06,  9.39it/s, loss=0.851, v_num=h892]Epoch 0:  50% 63/125 [00:06<00:06,  9.43it/s, loss=0.851, v_num=h892]Epoch 0:  50% 63/125 [00:06<00:06,  9.43it/s, loss=0.85, v_num=h892] Epoch 0:  51% 64/125 [00:06<00:06,  9.45it/s, loss=0.849, v_num=h892]Epoch 0:  52% 65/125 [00:06<00:06,  9.46it/s, loss=0.849, v_num=h892]Epoch 0:  52% 65/125 [00:06<00:06,  9.46it/s, loss=0.849, v_num=h892]Epoch 0:  53% 66/125 [00:06<00:06,  9.48it/s, loss=0.848, v_num=h892]Epoch 0:  54% 67/125 [00:07<00:06,  9.36it/s, loss=0.848, v_num=h892]Epoch 0:  54% 67/125 [00:07<00:06,  9.36it/s, loss=0.847, v_num=h892]Epoch 0:  54% 68/125 [00:07<00:06,  9.37it/s, loss=0.848, v_num=h892]Epoch 0:  55% 69/125 [00:07<00:05,  9.38it/s, loss=0.848, v_num=h892]Epoch 0:  55% 69/125 [00:07<00:05,  9.38it/s, loss=0.85, v_num=h892] Epoch 0:  56% 70/125 [00:07<00:05,  9.37it/s, loss=0.849, v_num=h892]Epoch 0:  57% 71/125 [00:07<00:05,  9.38it/s, loss=0.849, v_num=h892]Epoch 0:  57% 71/125 [00:07<00:05,  9.38it/s, loss=0.849, v_num=h892]Epoch 0:  58% 72/125 [00:07<00:05,  9.36it/s, loss=0.848, v_num=h892]Epoch 0:  58% 73/125 [00:07<00:05,  9.34it/s, loss=0.848, v_num=h892]Epoch 0:  58% 73/125 [00:07<00:05,  9.34it/s, loss=0.846, v_num=h892]Epoch 0:  59% 74/125 [00:07<00:05,  9.32it/s, loss=0.844, v_num=h892]Epoch 0:  60% 75/125 [00:08<00:05,  9.32it/s, loss=0.844, v_num=h892]Epoch 0:  60% 75/125 [00:08<00:05,  9.32it/s, loss=0.845, v_num=h892]Epoch 0:  61% 76/125 [00:08<00:05,  9.32it/s, loss=0.843, v_num=h892]Epoch 0:  62% 77/125 [00:08<00:05,  9.32it/s, loss=0.843, v_num=h892]Epoch 0:  62% 77/125 [00:08<00:05,  9.32it/s, loss=0.839, v_num=h892]Epoch 0:  62% 78/125 [00:08<00:05,  9.32it/s, loss=0.839, v_num=h892]Epoch 0:  63% 79/125 [00:08<00:04,  9.33it/s, loss=0.839, v_num=h892]Epoch 0:  63% 79/125 [00:08<00:04,  9.33it/s, loss=0.839, v_num=h892]Epoch 0:  64% 80/125 [00:08<00:04,  9.31it/s, loss=0.837, v_num=h892]Epoch 0:  65% 81/125 [00:08<00:04,  9.34it/s, loss=0.837, v_num=h892]Epoch 0:  65% 81/125 [00:08<00:04,  9.34it/s, loss=0.836, v_num=h892]Epoch 0:  66% 82/125 [00:08<00:04,  9.36it/s, loss=0.837, v_num=h892]Epoch 0:  66% 83/125 [00:08<00:04,  9.35it/s, loss=0.837, v_num=h892]Epoch 0:  66% 83/125 [00:08<00:04,  9.35it/s, loss=0.836, v_num=h892]Epoch 0:  67% 84/125 [00:08<00:04,  9.34it/s, loss=0.835, v_num=h892]Epoch 0:  68% 85/125 [00:09<00:04,  9.35it/s, loss=0.835, v_num=h892]Epoch 0:  68% 85/125 [00:09<00:04,  9.35it/s, loss=0.836, v_num=h892]Epoch 0:  69% 86/125 [00:09<00:04,  9.35it/s, loss=0.836, v_num=h892]Epoch 0:  70% 87/125 [00:09<00:04,  9.36it/s, loss=0.836, v_num=h892]Epoch 0:  70% 87/125 [00:09<00:04,  9.36it/s, loss=0.838, v_num=h892]Epoch 0:  70% 88/125 [00:09<00:03,  9.35it/s, loss=0.837, v_num=h892]Epoch 0:  71% 89/125 [00:09<00:03,  9.13it/s, loss=0.837, v_num=h892]Epoch 0:  71% 89/125 [00:09<00:03,  9.13it/s, loss=0.837, v_num=h892]Epoch 0:  72% 90/125 [00:09<00:03,  9.13it/s, loss=0.837, v_num=h892]Epoch 0:  73% 91/125 [00:10<00:03,  9.04it/s, loss=0.837, v_num=h892]Epoch 0:  73% 91/125 [00:10<00:03,  9.04it/s, loss=0.837, v_num=h892]srun: Job 2590762 step creation temporarily disabled, retrying (Requested nodes are busy)
+Epoch 0:  74% 92/125 [00:10<00:03,  9.02it/s, loss=0.836, v_num=h892]Epoch 0:  74% 93/125 [00:10<00:03,  9.01it/s, loss=0.836, v_num=h892]Epoch 0:  74% 93/125 [00:10<00:03,  9.01it/s, loss=0.837, v_num=h892]Epoch 0:  75% 94/125 [00:10<00:03,  9.03it/s, loss=0.838, v_num=h892]Epoch 0:  76% 95/125 [00:10<00:03,  9.05it/s, loss=0.838, v_num=h892]Epoch 0:  76% 95/125 [00:10<00:03,  9.05it/s, loss=0.837, v_num=h892]Epoch 0:  77% 96/125 [00:10<00:03,  9.07it/s, loss=0.838, v_num=h892]Epoch 0:  78% 97/125 [00:10<00:03,  9.07it/s, loss=0.838, v_num=h892]Epoch 0:  78% 97/125 [00:10<00:03,  9.07it/s, loss=0.838, v_num=h892]Epoch 0:  78% 98/125 [00:10<00:02,  9.08it/s, loss=0.838, v_num=h892]Epoch 0:  79% 99/125 [00:10<00:02,  9.04it/s, loss=0.838, v_num=h892]Epoch 0:  79% 99/125 [00:10<00:02,  9.04it/s, loss=0.838, v_num=h892]Epoch 0:  80% 100/125 [00:11<00:02,  9.02it/s, loss=0.838, v_num=h892]Epoch 0:  81% 101/125 [00:11<00:02,  9.10it/s, loss=0.838, v_num=h892]
+Validating: 0it [00:00, ?it/s][A
+Validating:   0% 0/25 [00:00<?, ?it/s][A
+Validating:  16% 4/25 [00:00<00:00, 32.08it/s][AEpoch 0:  84% 105/125 [00:11<00:02,  9.36it/s, loss=0.838, v_num=h892]
+Validating:  32% 8/25 [00:00<00:00, 32.54it/s][AEpoch 0:  87% 109/125 [00:11<00:01,  9.61it/s, loss=0.838, v_num=h892]
+Validating:  48% 12/25 [00:00<00:00, 30.38it/s][AEpoch 0:  90% 113/125 [00:11<00:01,  9.84it/s, loss=0.838, v_num=h892]
+Validating:  64% 16/25 [00:00<00:00, 32.12it/s][AEpoch 0:  94% 117/125 [00:11<00:00, 10.09it/s, loss=0.838, v_num=h892]
+Validating:  80% 20/25 [00:00<00:00, 32.03it/s][AEpoch 0:  97% 121/125 [00:11<00:00, 10.32it/s, loss=0.838, v_num=h892]
+Validating:  96% 24/25 [00:00<00:00, 30.59it/s][AEpoch 0: 100% 125/125 [00:11<00:00, 10.54it/s, loss=0.838, v_num=h892]Epoch 0: 100% 125/125 [00:11<00:00, 10.51it/s, loss=0.838, v_num=h892]
+                                               [AEpoch 0:   0% 0/125 [00:00<?, ?it/s, loss=0.838, v_num=h892]          Epoch 1:   0% 0/125 [00:00<?, ?it/s, loss=0.838, v_num=h892]Epoch 1:   1% 1/125 [00:00<00:12,  9.87it/s, loss=0.838, v_num=h892]Epoch 1:   2% 2/125 [00:00<00:11, 11.00it/s, loss=0.836, v_num=h892]Epoch 1:   2% 3/125 [00:00<00:12, 10.12it/s, loss=0.836, v_num=h892]Epoch 1:   3% 4/125 [00:00<00:11, 10.65it/s, loss=0.836, v_num=h892]Epoch 1:   3% 4/125 [00:00<00:11, 10.64it/s, loss=0.836, v_num=h892]Epoch 1:   4% 5/125 [00:00<00:12,  9.48it/s, loss=0.836, v_num=h892]Epoch 1:   5% 6/125 [00:00<00:12,  9.61it/s, loss=0.835, v_num=h892]Epoch 1:   6% 7/125 [00:00<00:12,  9.44it/s, loss=0.831, v_num=h892]Epoch 1:   6% 8/125 [00:00<00:12,  9.68it/s, loss=0.831, v_num=h892]Epoch 1:   6% 8/125 [00:00<00:12,  9.68it/s, loss=0.834, v_num=h892]Epoch 1:   7% 9/125 [00:01<00:13,  8.44it/s, loss=0.832, v_num=h892]Epoch 1:   8% 10/125 [00:01<00:13,  8.39it/s, loss=0.832, v_num=h892]Epoch 1:   9% 11/125 [00:01<00:13,  8.49it/s, loss=0.833, v_num=h892]Epoch 1:  10% 12/125 [00:01<00:13,  8.57it/s, loss=0.833, v_num=h892]Epoch 1:  10% 12/125 [00:01<00:13,  8.57it/s, loss=0.838, v_num=h892]Epoch 1:  10% 13/125 [00:01<00:12,  8.70it/s, loss=0.84, v_num=h892] Epoch 1:  11% 14/125 [00:01<00:12,  8.70it/s, loss=0.84, v_num=h892]Epoch 1:  12% 15/125 [00:01<00:12,  8.80it/s, loss=0.84, v_num=h892]Epoch 1:  13% 16/125 [00:01<00:12,  8.89it/s, loss=0.84, v_num=h892]Epoch 1:  13% 16/125 [00:01<00:12,  8.89it/s, loss=0.84, v_num=h892]Epoch 1:  14% 17/125 [00:01<00:12,  8.98it/s, loss=0.845, v_num=h892]srun: Job 2590762 step creation still disabled, retrying (Requested nodes are busy)
+srun: error: Unable to create step for job 2590762: Job/step already completing or completed
+srun: Job step aborted: Waiting up to 32 seconds for job step to finish.
+slurmstepd: error: *** JOB 2590762 ON cgpu01 CANCELLED AT 2022-01-10T23:28:22 ***
+slurmstepd: error: *** STEP 2590762.0 ON cgpu01 CANCELLED AT 2022-01-10T23:28:22 ***
